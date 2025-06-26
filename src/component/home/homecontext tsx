@@ -1,0 +1,45 @@
+import React, { createContext, useContext, useState } from 'react';
+import home from './home';
+
+type homeContextType = {
+  showHome: (message: string, type?: 'success' | 'error' | 'info') => void;
+};
+
+const HomeContext = createContext<homeContextType>({
+  showHome: () => {},
+});
+
+export function HomeProvider({ children }) {
+    const [home, setHome] = useState<{
+        isVisible: boolean;
+        message: string;
+        type: 'success' | 'error' | 'info' | 'warning';
+    }>({
+        isVisible: false,
+        message: '',
+        type: 'success',
+    });
+
+    const showHome = (message: string, type: 'success' | 'error' | 'info' = 'success') => {
+        setHome({ isVisible: true, message, type });
+    };
+
+    const hidehome = () => {
+        setHome({ ...home, isVisible: false });
+    };
+
+    return (
+        <HomeContext.Provider value={{ showHome }}>
+            {children}
+            <home>
+                message={home.message}
+                type={home.type}
+                isVisible={home.isVisible}
+                onclose={hidehome}
+                duration={3000}
+            />
+        </HomeContext.Provider>
+    );
+};
+
+export const useHome = () => useContext(HomeContext);
