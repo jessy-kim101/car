@@ -5,16 +5,16 @@ import { UserApi } from '../../features/user/usersApi';
 import { useNavigate } from 'react-router';
 
 type RegisterInputs = {
-    firstName: string;
-    lastName: string;
+    first_name: string;
+    last_name: string;
     email: string;
     password: string;
     confirmPassword: string;
 };
 
 const schema = yup.object({
-    firstName: yup.string().max(50, 'Max 50 characters').required('First name is required'),
-    lastName: yup.string().max(50, 'Max 50 characters').required('Last name is required'),
+    first_name: yup.string().max(50, 'Max 50 characters').required('first_name is required'),
+    last_name: yup.string().max(50, 'Max 50 characters').required('last_name is required'),
     email: yup.string().email('Invalid email').max(100, 'Max 100 characters').required('Email is required'),
     password: yup.string().min(6, 'Min 6 characters').max(255, 'Max 255 characters').required('Password is required'),
     confirmPassword: yup
@@ -41,7 +41,7 @@ function Register() {
         console.log(data);
         try {
             const response = await createUser(data).unwrap()
-            console.log("response here...", response);
+           console.log("response here...", response);
             // Redirect to verification page or login page
             setTimeout(() => {
                 navigate('/register/verify', {
@@ -63,24 +63,24 @@ function Register() {
 
                     <input
                         type="text"
-                        {...register('firstName')}
-                        placeholder="First Name"
+                        {...register('first_name')}
+                        placeholder="first_name"
                         className='input border border-gray-300 rounded w-full p-2 focus:ring-2 focus:ring-blue-500 text-lg '
                     />
 
-                    {errors.firstName && (
-                        <span className=" text-red-700 text-sm">{errors.firstName.message}</span>
+                    {errors.first_name && (
+                        <span className=" text-red-700 text-sm">{errors.first_name.message}</span>
                     )}
 
                     <input
                         type="text"
-                        {...register('lastName')}
-                        placeholder="Last Name"
+                        {...register('last_name')}
+                        placeholder="last_name"
                         className='input border border-gray-300 rounded w-full p-2 focus:ring-2 focus:ring-blue-500 text-lg '
                     />
 
-                    {errors.lastName && (
-                        <span className=" text-red-700 text-sm">{errors.lastName.message}</span>
+                    {errors.last_name && (
+                        <span className=" text-red-700 text-sm">{errors.last_name.message}</span>
                     )}
 
                     <input
