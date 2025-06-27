@@ -14,7 +14,7 @@ const error = () => {
               <span className="text-primary">FOR SAFARI RALLY EXPERIENCE</span>
             </h1>
             <p className="text-lg text-gray-300 max-w-lg mx-auto lg:mx-0">
-              Experience the thrill of driving premium vehicles. Book your dream car today and enjoy the journey in style.
+             Book your dream car today and enjoy discounts in your journey in style.
             </p>
             
             {/* CTA Buttons */}

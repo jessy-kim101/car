@@ -31,7 +31,7 @@ export function HomeProvider({ children }) {
     return (
         <HomeContext.Provider value={{ showHome }}>
             {children}
-            <home>
+            <home
                 message={home.message}
                 type={home.type}
                 isVisible={home.isVisible}

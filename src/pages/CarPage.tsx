@@ -5,7 +5,7 @@ const CarPage = () => {
     <div>
         <header className="w-full  bg-gray-950 text-white py-12 flex flex-col items-center pt-16">
             <div className=''>
-                <h1 className="text-4xl md:text-5xl font-bold text-center">Discounted vouchers for Cars</h1>
+                <h1 className="text-4xl md:text-5xl font-bold text-center">SAFARI RALLY VOUCHERS</h1>
            
             <p className="text-lg md:text-xl text-center mt-4 max-w-3xl mx-auto">
             Explore our exclusive discounted vouchers of luxury cars available for rent.

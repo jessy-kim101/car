@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from '../src/component/nav';
 import Hero from '../src/component/Hero';
-import Login from '../src/component/nav';
-//import RegisterPage from './pages/registerPage';
+import Login from '../src/pages/auth/Login';
+import Register from '../src/pages/auth/Register';
 //import LoginPage from './pages/loginPage';
 //import ContactPage from './pages/contactPage';
 
@@ -22,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Hero />} />
              <Route path="/login" element={<Login />} />
+               <Route path="/register" element={<Register />} />
             {/* <Route path="/cars" element={<CarPage />} />
 
            
