@@ -19,7 +19,7 @@ const CarPage = () => {
   />
   <button
     type="submit"
-    className="bg-amber-400 text-gray-950 font-semibold px-4 py-2 rounded-md hover:bg-green-600 transition duration-200"
+    className="font-medium bg -gray-800 text-white px-4 py-2 rounded-md"
   >
     Search
   </button>

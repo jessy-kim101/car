@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { bookingAPI } from '../AdminDashboard/bookingAPI';
-import  type { TIBooking } from '../../../Features/bookings/bookingAPI'
+import { bookingAPI } from '../../../features/booking/bookingApi';
+import  type { TIBooking } from '../../../features/booking/bookingApi';
 
 const GetBookings = () => {
   const {data:bookingsData, isLoading, error} = bookingAPI.useGetBookingsQuery(undefined,{
@@ -55,7 +54,7 @@ const GetBookings = () => {
         
     </div>
       ) : (
-        <p className='text-gray-500'>bookings not foung</p>
+        <p className='text-gray-500'>bookings not found</p>
       )}
     </div>
 

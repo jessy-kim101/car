@@ -44,7 +44,7 @@ function Register() {
            console.log("response here...", response);
             // Redirect to verification page or login page
             setTimeout(() => {
-                navigate('/register/verify', {
+                navigate('/verify', {
                     state: { email: data.email }
                 });
             }, 2000);

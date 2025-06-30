@@ -1,25 +1,14 @@
 //import React, { useState } from 'react';
 import {  NavLink } from 'react-router-dom';
-// import { useSelector, useDispatch } from 'react-redux';
-// import  {persistor, type RootState} from '../app/store';
-// import { logout } from '../features/login/userSlice';
+//import { useSelector, useDispatch } from 'react-redux';
+ //import  {persistor, type RootState} from '../app/store';
+//import { logout } from '../features/login/userSlice';
 
 const Nav = () => {
   // const dispatch = useDispatch();
 
   
-  // const user = useSelector((state: RootState) => state.user.user);
 
-  // const handleLogout = async () => {
-  //   try {
-  //     dispatch(logout()); // Clear user and token in Redux
-  //     // await persistor.purge(); // Clear persisted state
-  //     setIsDropdownOpen(false);
-  //     navigate('/login');
-  //   } catch (error) {
-  //     console.error('Logout failed:', error);
-  //   }
-  // };
 
   
   const activeClassname = 'text-primary font-medium';
@@ -47,6 +36,11 @@ const Nav = () => {
             <li>
               <NavLink to="/" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
                 Home
+              </NavLink>
+            </li>
+             <li>
+              <NavLink to="/" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
+                Dashboard
               </NavLink>
             </li>
             <li>
@@ -83,13 +77,18 @@ const Nav = () => {
               Home
             </NavLink>
           </li>
+           <li className="hover:white transition duration-200">
+            <NavLink to="/" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
+              Dashboard
+            </NavLink>
+          </li>
           <li className="hover:white transition duration-200">
             <NavLink to="/cars" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
               Cars
             </NavLink>
           </li>
           <li className="hover:white transition duration-200">
-            <NavLink to="/locations" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
+            <NavLink to="/bookings" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
               Bookings
             </NavLink>
           </li>

@@ -18,6 +18,15 @@ export type TVerify = {
     email: string;
     code: string;
     };
+export type TUpdate = {
+    email: string;
+    code: string;
+    };
+
+export type TGet = {
+    email: string;
+    code: string;
+    };
 
 export const UserApi = createApi({
     reducerPath:'userApi',
@@ -38,9 +47,34 @@ export const UserApi = createApi({
             invalidatesTags:['Users']
 
     }),
+
+    getUser:builder.mutation<TGet, { email: string; code: string }>({
+        query: ({ email,code }) => ({
+            url: '/auth/get-email',
+            method: 'POST',
+            body: { email,code }
+        }),
+        invalidatesTags: ['Users']
+    }),
     verifyUser:builder.mutation<TVerify, { email: string; code: string }>({
         query: ({ email,code }) => ({
             url: '/auth/verify-email',
+            method: 'POST',
+            body: { email,code }
+        }),
+        invalidatesTags: ['Users']
+    }),
+    getUsers:builder.query<TUser[], void>({
+        query:()=>({
+            url:'/auth/get-users',
+            method:'GET'
+        }),
+        providesTags:['Users']
+    }),
+
+    updateUser:builder.mutation<TUpdate, { email: string; code: string }>({
+        query: ({ email,code }) => ({
+            url: '/auth/update-email',
             method: 'POST',
             body: { email,code }
         }),

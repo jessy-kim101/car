@@ -1,6 +1,6 @@
 import { toast } from "sonner";
 import { bookingAPI } from '../../../features/booking/bookingApi';
-import type { TIBooking } from "../../../features/booking/bookingAPI";
+import type { TIBooking } from '../../../features/booking/bookingApi';
 
 type DeleteBookingProps = {
     booking: TIBooking | null;
@@ -17,7 +17,7 @@ const DeleteBooking = ({ booking }: DeleteBookingProps) => {
                 toast.error("No todo selected for deletion.");
                 return;
             }
-            await deleteBooking(booking.id);
+            await deleteBooking(booking);
             toast.success("Booking deleted successfully!");
             (document.getElementById('delete_modal') as HTMLDialogElement)?.close();
 
@@ -34,8 +34,7 @@ const DeleteBooking = ({ booking }: DeleteBookingProps) => {
 
                 <h3 className="font-bold text-lg mb-4">Delete Booking</h3>
                 <p className="mb-6">
-                    Are you sure you want to delete <span className="font-semibold">{booking?.bookingName}</span>?
-                </p>
+                    Are you sure you want to delete <span className="font-semibold">{booking?.booking_id}</span>                </p>
                 <div className="modal-action flex gap-4">
                     <button
                         className="btn btn-error"
