@@ -8,12 +8,13 @@ import ContactPage from '../src/pages/contactpage';
 import AboutPage from '../src/pages/AboutPage';
  import CarPage from '../src/pages/CarPage';
  import Verify from '../src/pages/auth/VerifyUser';
-import AdminDashboard from '../src/dashboard/Admin dashboard/AdminDashboard';
+ import BookingsPage from '../src/pages/bookingpage';
  //import Footer from '../src/component/footer/footer';
 // import AdminDrawer from './dashboard/Admin dashboard/aside/AdminDrawer';
-//import GetBookings from './dashboard/Admin dashboard/booking/GetBooking';
-//import Profile from '../src/dashboard/Admin dashboard/Profile';
+import Profile from './dashboard/Admin dashboard/Profile';
+
 //import { useSelector } from 'react-redux';
+import AdminDashboard from './dashboard/Admin dashboard/AdminDashboard';
 
 
 
@@ -29,15 +30,21 @@ function App() {
                <Route path="/register" element={<Register />} />
               <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+              <Route path="/bookings" element={<BookingsPage />} />
                <Route path="/cars" element={<CarPage />} />
                 <Route path="/verify" element={<Verify />} />
-                <Route path="/dashboard" element={<AdminDashboard />} />
+               
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            
+            <Route path="/user/dashboard/profile" element={<Profile />} /> 
 
-            {/* <Route path="/cars" element={<CarPage />} />
 
-           
-           
-            <Route path="/profile" element={<Profile />} /> */}
+
+
+
+            {/* Add more routes as needed */}
+
+         
           </Routes>
         </div>
     

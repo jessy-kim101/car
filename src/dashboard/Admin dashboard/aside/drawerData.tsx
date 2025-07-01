@@ -14,16 +14,16 @@ export type DrawerData = {
 export const adminDrawerData: DrawerData[] = [
 
     {
-        id: "todos",
-        name: "Todos",
+        id: "booking",
+        name: "Booking",
         icon: FaTasks,
-        link: "todos"
+        link: "booking"
     },
     {
-        id: "users",
-        name: "Users",
+        id: "manageUsers",
+        name: "manageUsers",
         icon: FiUsers,
-        link: "users"
+        link: "manage-users"
     },
     {
         id: "profile",
@@ -32,10 +32,10 @@ export const adminDrawerData: DrawerData[] = [
         link: "profile"
     },
     {
-        id: "analytics",
-        name: "Analytics",
+        id: "aside",
+        name: "aside",
         icon: TbBrandGoogleAnalytics,
-        link: "analytics"
+        link: "aside"
     },
 
 ]

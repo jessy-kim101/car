@@ -2,7 +2,6 @@ import { useForm, type SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { bookingAPI } from '../../../features/booking/bookingApi';
-
 type CreateBookingInputs = {
     bookingName: string;
     description: string;

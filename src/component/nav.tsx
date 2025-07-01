@@ -39,7 +39,7 @@ const Nav = () => {
               </NavLink>
             </li>
              <li>
-              <NavLink to="/" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
+              <NavLink to="/admin/dashboard" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
                 Dashboard
               </NavLink>
             </li>
@@ -78,7 +78,7 @@ const Nav = () => {
             </NavLink>
           </li>
            <li className="hover:white transition duration-200">
-            <NavLink to="/" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
+            <NavLink to="/admin/dashboard" className={({ isActive }) => (isActive ? activeClassname : inactiveClassname)}>
               Dashboard
             </NavLink>
           </li>

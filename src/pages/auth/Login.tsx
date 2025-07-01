@@ -50,9 +50,9 @@ function Login() {
           
 
             if (response.user.role === 'admin') {
-                navigate('/admin/dashboard/todos');
+                navigate('/admin/dashboard/booking');
             } else if (response.user.role === 'user') {
-                navigate('/user/dashboard/todos');
+                navigate('/user/dashboard/booking');
             }
 
         } catch (error) {
